@@ -11,7 +11,7 @@ pipeline {
                 script {
                     echo 'Building the Angular project'
                     sh 'npm install'
-                    sh 'ng build'
+                    sh 'npm build'
                 }
             }
         }
