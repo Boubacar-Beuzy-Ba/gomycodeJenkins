@@ -1,12 +1,15 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS' // Use the name you configured in Global Tool Configuration
+    }
+
     stages {
         stage('Build') {
             steps {
                 script {
                     echo 'Building the Angular project'
-                    sh 'npm init'
                     sh 'npm install'
                     sh 'ng build'
                 }
